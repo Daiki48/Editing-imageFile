@@ -1,5 +1,5 @@
 import "./style/App.css";
-import { FileSelect } from "./FileSelect";
+import { FileSelect } from "./components/FileSelect";
 
 function App() {
   return (
