@@ -1,5 +1,5 @@
 import { GetInfo } from "./FileInfo";
-import { styles } from "./styles";
+import { styles } from "./style/styles";
 
 export const FileSelect = () => {
   const { handleFiles, imgRef } = GetInfo();

@@ -1,5 +1,5 @@
 import { ChangeEventHandler, useRef, useState } from "react";
-import { imgDisplaySize } from "./styles";
+import { imgDisplaySize } from "./style/styles";
 
 const fileImage = new Image();
 
