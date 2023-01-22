@@ -35,8 +35,22 @@ export const GetInfo = () => {
 
   const operateImgSize = (url: string) => {
     fileImage.src = url;
-    fileImage.width = imgDisplaySize.width;
-    fileImage.height = imgDisplaySize.height;
+    // fileImage.width = imgDisplaySize.width;
+    // fileImage.height = imgDisplaySize.height;
+    fileImage.onload = () => {
+      const width = fileImage.naturalWidth;
+      const height = fileImage.naturalHeight;
+      console.log("load size : ", width, height);
+      const ratioWidth = width / imgDisplaySize.width;
+      const ratioHeight = height / imgDisplaySize.height;
+      if (ratioWidth > ratioHeight) {
+        fileImage.width = imgDisplaySize.width;
+        fileImage.height = height / ratioWidth;
+      } else {
+        fileImage.width = width / ratioHeight;
+        fileImage.height = imgDisplaySize.height;
+      }
+    };
   };
 
   return { handleFiles, imgRef };
