@@ -1,4 +1,6 @@
-# Select image file preview
+# Editing-imageFile
+
+# Start localhost
 
 ```shell
 $ npm run dev
